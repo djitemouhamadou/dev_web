@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    display: flexbox;
+    background-color:rgb(128, 148, 154);
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    min-width: 860px;
+
+
+}
+header{
+    height: 90px;
+    width: 100%;
+    
+
+}
+img{
+    padding: 0;
+    width:35px;
+    height: auto;
+    padding: 5px;
+}
+.nav{
+    
+    padding: 30px;
+    height: 20vh;
+    width:100vw;
+    align-items: center;
+    background-color: rgb(8, 25, 25);
+    min-width: 850px;
+    
+}
+
+.nav a{
+    color: rgb(0, 255, 89);
+    font-size: 1.2em;
+}
+
+.nav .nomEntreprise{
+    font-size: 2.5em;
+    padding-left: 0px;
+    color: #eb7371;
+}
+
+.nav .compte ul{
+    display: flex;
+    padding: 13px;
+    
+    
+}
+.nav .compte{
+    float:right;
+
+}
+.nav .compte li{
+     
+    margin: 0 20px;
+    color: rgb(0, 255, 89);
+}
+
+
+
+.typeVetements{
+    width:0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+    visibility: hidden;
+    
+
+}
+.typeVetements li{
+    margin-top: 5vh;
+    color: #eb7371;
+}
+.typeVetements ul li a{
+    color:#eb7371;
+}
+.typeVetements ul li:first-child{
+    margin-top: 0vh;
+}
+.menuder{
+    height: 100vh;
+    visibility: visible;
+    width:20vw;
+    transition: all ease .3s;
+    
+    
+}
+
+
+button{z-index: 3;
+    background-color: rgb(8, 25, 25);
+    border: 0;
+}
+
+
+.divform{
+    display: flex;
+    justify-content:center;
+    flex-direction: columns;
+    align-items: center;
+    background-color: rgb(128, 148, 154);
+    font-family: 'Roboto', sans-serif;
+    z-index: -1;
+}
+  form {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 40px 60px;
+    border-radius: 10px;
+    min-width: 500px;
+  }
+  form h1{
+    color: #eb7371;
+    text-align:center;
+  }
+  form .social-media{
+    margin-top: -10px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  form p.choose-email{
+    text-align:center;
+  }
+  form .inputs {
+    display: flex;
+    flex-direction: column;
+  }
+  form .inputs input[type='email'], input[type='password']{
+    padding: 15px;
+    border:none;
+    border-radius: 5px;
+    background-color:#f2f2f2;
+    outline:none;
+    margin-bottom: 15px;
+  }
+  form p.inscription{
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #878787;
+  }
+  form p.inscription span{
+    color: #eb7371;
+  }
+  form button{
+    padding: 15px 25px;
+    border-radius: 5px;
+    border:none;
+    font-size: 15px;
+    color: #fff;
+    background-color: #eb7371;
+    outline:none;
+    cursor:pointer;
+  }
