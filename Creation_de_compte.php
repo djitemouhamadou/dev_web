@@ -14,12 +14,12 @@ if (isset($_POST['creation'])) {
     $insertUtilisateur->execute(array($Nom, $Prenom, $Email, $Password, $cle, 0));
 
     $RecupUser = $bdd->prepare('SELECT * FROM user WHERE Nom = ? AND Prenom=? AND Email=? AND cle=?');
-    $RecupUser->execute(array($Nom, $Prenom, $Email,$cle));
-    
+    $RecupUser->execute(array($Nom, $Prenom, $Email, $cle));
+
     if ($RecupUser->rowCount() > 0) {
       $userInfos = $RecupUser->fetch();
       $_SESSION['id'] = $userInfos['id'];
-      echo $_SESSION['id']==1;
+      echo $_SESSION['id'] == 1;
       /* 
       $_SESSION['Nom'] = $Nom;
       $_SESSION['Prenom'] = $Prenom;
@@ -101,19 +101,19 @@ if (isset($_POST['creation'])) {
 </head>
 
 <body>
-  <header>
-    <nav class="nav">
-      <button onclick="fct()"><img src="pngegg.png" alt="menuBarre" class="menuBarre" id="menuBarre"></button>
-      <a href="" class="nomEntreprise">Top Vêtement</a></button>
-      <div class="compte">
-        <ul>
-          <li><a href="Acces_au_compte.php">Se connecter</a></li>
-          <li><a href="">Mon panier</a></li>
-          <li><a href="">Langue</a></li>
-        </ul>
-      </div>
+  <nav class="nav">
+    <button onclick="fct()"><img src="pngegg.png" alt="menuBarre" class="menuBarre" id="menuBarre"></button>
+    <a href="" class="nomEntreprise">Top Vêtement</a></button>
+    <div class="compte">
+      <ul>
+        <li><a href="Acces_au_compte.php">Se connecter</a></li>
+        <li><a href="">Mon panier</a></li>
+        <li><a href="">Langue</a></li>
+      </ul>
+    </div>
 
-    </nav>
+  </nav>
+  <div style="display:flex;background-color:white;">
     <div class="typeVetements">
       <ul>
         <li><a href="">Vêtements femmes</a></li>
@@ -121,31 +121,31 @@ if (isset($_POST['creation'])) {
         <li><a href="">sport</a></li>
       </ul>
     </div>
-  </header>
 
 
-  <div class="divform">
-    <form method="POST" action="">
+    <div class="divform">
+      <form method="POST" action="">
 
-      <h1>INFORMATIONS PERSONNELLES</h1>
-
-
-      <div class="inputs">
-        <input type="text" placeholder="Nom" name="Nom" />
-        <input type="text" placeholder="Prénom" name="Prenom" />
-        <input type="email" placeholder="Email" name="Email" />
-        <br>
-        <hr>
-        <br>
-        <input type="password" placeholder="Mot de passe" name="Password">
-        <input type="password" placeholder="Confirmer le mot de passe" name="Cpassword">
-      </div>
+        <h1>INFORMATIONS PERSONNELLES</h1>
 
 
-      <div align="center">
-        <input type="submit" name="creation">Créer un compte</button>
-      </div>
-    </form>
+        <div class="inputs">
+          <input type="text" placeholder="Nom" name="Nom" />
+          <input type="text" placeholder="Prénom" name="Prenom" />
+          <input type="email" placeholder="Email" name="Email" />
+          <br>
+          <hr>
+          <br>
+          <input type="password" placeholder="Mot de passe" name="Password">
+          <input type="password" placeholder="Confirmer le mot de passe" name="Cpassword">
+        </div>
+
+
+        <div align="center">
+          <input type="submit" name="creation">Créer un compte</button>
+        </div>
+      </form>
+    </div>
   </div>
 </body>
 
