@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-  
+
 //echo sha1('hi');
 echo $_POST['Email'] . $_POST['Password'];
 if (isset($_POST['connexion'])) {
-  echo "       isset marche!!!!!!!!!!!!!".$_POST['connexion'].!empty($_POST['Email'].!empty($_POST['Password']));
+  echo "       isset marche!!!!!!!!!!!!!" . $_POST['connexion'] . !empty($_POST['Email'] . !empty($_POST['Password']));
   if (!empty($_POST['Email']) and !empty($_POST['Password'])) {
     $bdd = new PDO('mysql:host=localhost;dbname=utilisateurs;charset=utf8', 'root', '');
     echo "empty marche!!!!!!!!!!!!!!!!!";
@@ -46,7 +46,9 @@ if (isset($_POST['connexion'])) {
 
 
 
-}else{echo "isset marche pas";}
+} else {
+  echo "isset marche pas";
+}
 ?>
 
 
@@ -64,18 +66,18 @@ if (isset($_POST['connexion'])) {
 </head>
 
 <body>
-  <header>
-    <nav class="nav">
-      <button onclick="fct()"><img src="pngegg.png" alt="menuBarre" class="menuBarre" id="menuBarre"></button>
-      <a href="" class="nomEntreprise">Top Vêtement</a></button>
-      <div class="compte">
-        <ul>
-          <li><a href="Acces_au_compte.php">Se connecter</a></li>
-          <li><a href="">Mon panier</a></li>
-          <li><a href="">Langue</a></li>
-        </ul>
-      </div>
-    </nav>
+  <nav class="nav">
+    <button onclick="fct()"><img src="pngegg.png" alt="menuBarre" class="menuBarre" id="menuBarre"></button>
+    <a href="" class="nomEntreprise">Top Vêtement</a></button>
+    <div class="compte">
+      <ul>
+        <li><a href="Acces_au_compte.php">Se connecter</a></li>
+        <li><a href="">Mon panier</a></li>
+        <li><a href="">Langue</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div style="display:flex">
     <div class="typeVetements">
       <ul>
         <li><a href="">Vêtements femmes</a></li>
@@ -87,27 +89,27 @@ if (isset($_POST['connexion'])) {
     </div>
 
 
-  </header>
-  <div class="divform">
-    <form method='POST' action="">
+    <div class="divform">
+      <form method='POST' action="">
 
-      <h1>Connexion</h1>
+        <h1>Connexion</h1>
 
 
-      <div class="inputs">
-        <input type="email" placeholder="Email" name="Email" />
+        <div class="inputs">
+          <input type="email" placeholder="Email" name="Email" />
 
-        <hr>
-        <br>
-        <input type="password" placeholder="Mot de passe" name="Password">
-        
-      </div>
-      <div align="center">
-        <p>Pas de compte?<a href="Creation_de_compte.php">Créer un compte ici.</a></p>
-        <input type="submit" name="connexion">Se connecter</input>
-      </div>
-    </form>
+          <hr>
+          <br>
+          <input type="password" placeholder="Mot de passe" name="Password">
 
+        </div>
+        <div align="center">
+          <p>Pas de compte?<a href="Creation_de_compte.php">Créer un compte ici.</a></p>
+          <input type="submit" name="connexion">Se connecter</input>
+        </div>
+      </form>
+
+    </div>
   </div>
 </body>
 

@@ -1,9 +1,12 @@
 <?php
+/*
 session_start();
 $_SESSION = array();
 session_destroy();
 header("location:Acces_au_compte.php");
-?>
+
+*/
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,9 +23,8 @@ header("location:Acces_au_compte.php");
 </head>
 
 <body>
-    <header>
         <nav class="nav">
-            <button onclick="fct()"><img src="pngegg.png" alt="menuBarre" class="menuBarre" id="menuBarre"></button>
+            <button onclick="fct()" class="bouton"><img src="pngegg.png" alt="menuBarre" class="menuBarre" id="menuBarre"></button>
             <a href="" class="nomEntreprise">Top Vêtement</a></button>
             <div class="compte">
                 <ul>
@@ -33,7 +35,11 @@ header("location:Acces_au_compte.php");
             </div>
 
         </nav>
-        <div class="typeVetements">
+        
+
+
+    
+    <div class="typeVetements">
             <ul>
                 <li><a href="">Femmes</a>
                     <ul>
@@ -47,9 +53,6 @@ header("location:Acces_au_compte.php");
                 <li><a href="">Beauté</a></li>
             </ul>
         </div>
-
-
-    </header>
 </body>
 
 </html>

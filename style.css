@@ -8,12 +8,13 @@
 
 body{
     display: flexbox;
-    background-color:rgb(128, 148, 154);
-    width: 100%;
+    /*background-color:rgb(128, 148, 154);*/
+    background-color: white;
+    width: 100vw;
     min-height: 100vh;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-    min-width: 860px;
+    min-width: 1038px;
 
 
 }
@@ -23,6 +24,34 @@ header{
     
 
 }
+.bouton{
+  
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+
+.box-with-text {
+  background-image: -webkit-linear-gradient(rgb(138, 12, 39) 50%, white 50%);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: 100% 50px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-animation: stripes 2s linear infinite;
+  animation: stripes 2s linear infinite;
+}
+
+@-webkit-keyframes stripes {
+  100% {
+    background-position: 0 -50px;
+  }
+}
+
+@keyframes stripes {
+  100% {
+    background-position: 0 -50px;
+  }
+}
 img{
     padding: 0;
     width:35px;
@@ -30,10 +59,10 @@ img{
     padding: 5px;
 }
 .nav{
-    
     padding: 30px;
     height: 20vh;
     width:100vw;
+    min-width: 1038px;
     align-items: center;
     background-color: rgb(8, 25, 25);
     min-width: 850px;
@@ -46,9 +75,24 @@ img{
 }
 
 .nav .nomEntreprise{
-    font-size: 2.5em;
+  
+    font-size: 2em;
+    font-weight: 700;
     padding-left: 0px;
-    color: #eb7371;
+    white-space: nowrap;
+    line-height: 20vh;
+  font: bold 6vmax/.8 Open Sans, Lucida Sans;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-image: -webkit-linear-gradient(crimson 50%, white 50%);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: 100% 10px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-animation: stripes 2s linear infinite;
+  animation: stripes 4s linear infinite;
 }
 
 .nav .compte ul{
@@ -91,7 +135,11 @@ img{
 .menuder{
     height: 100vh;
     visibility: visible;
-    width:20vw;
+    width:10vw;
+    min-width: 91px;
+    
+    background-color: black;
+
     transition: all ease .3s;
     
     
@@ -105,7 +153,7 @@ button{z-index: 3;
 
 
 .divform{
-    display: flex;
+    display: contents;
     justify-content:center;
     flex-direction: columns;
     align-items: center;
@@ -163,3 +211,15 @@ button{z-index: 3;
     outline:none;
     cursor:pointer;
   }
+
+
+
+*.box-with-text {
+  
+  white-space: nowrap;
+  text-transform: uppercase;
+  font: bold 26vmax/.8 Open Sans, Impact;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
